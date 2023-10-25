@@ -1,24 +1,26 @@
-// tailwind.config.js
-module.exports  = {
+import indexHtml from "./index.html";
+import { default as srcFiles } from "./src/**/*.{js,jsx,ts,tsx}";
+
+export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}"
+    indexHtml,
+    srcFiles
   ],
   theme: {
     extend: {
       keyframes: {
         'fade-in-down': {
           "from": {
-            tranform: "translateY(-0.75rem)",
+            transform: "translateY(-0.75rem)",
             opacity: '0'
           },
           "to": {
-            transform:"translateY(0rem)",
-            opacity:'1'
+            transform: "translateY(0rem)",
+            opacity: '1'
           },
         },
       },
-      animation : {
+      animation: {
         'fade-in-down': "fade-in-down 0.2s ease-in-out both",
       }
     },
